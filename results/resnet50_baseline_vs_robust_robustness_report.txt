@@ -1,0 +1,83 @@
+======================================================================
+RESNET-50 BASELINE vs ROBUST
+CORRECTED ROBUSTNESS COMPARISON
+======================================================================
+
+Test images : 8,147
+Classes     : 38
+
+Baseline checkpoint epoch : 14
+Baseline Val Macro-F1      : 0.9978471949046235
+
+Robust checkpoint epoch : 12
+Robust Val Macro-F1     : None
+
+======================================================================
+CLEAN TEST COMPARISON
+======================================================================
+
+Baseline Accuracy : 99.8650%
+Robust Accuracy   : 99.7300%
+
+Baseline Macro-F1 : 99.7282%
+Robust Macro-F1   : 99.5572%
+
+======================================================================
+GAUSSIAN NOISE COMPARISON
+======================================================================
+
+Baseline Accuracy : 38.9837%
+Robust Accuracy   : 87.9465%
+Improvement       : 48.9628 percentage points
+
+Baseline Macro-F1 : 37.4118%
+Robust Macro-F1   : 85.9364%
+Improvement       : 48.5246 percentage points
+
+======================================================================
+WORST ROBUSTNESS CONDITIONS
+======================================================================
+
+Baseline worst condition : Gaussian Noise
+Baseline Macro-F1        : 37.4118%
+Baseline Macro-F1 drop   : 62.3164 percentage points
+
+Robust worst condition   : Gaussian Noise
+Robust Macro-F1          : 85.9364%
+Robust Macro-F1 drop     : 13.6207 percentage points
+
+======================================================================
+ROBUST MODEL IMPROVEMENT
+======================================================================
+
+Best Accuracy improvement : Gaussian Noise
+Accuracy improvement      : 48.9628 percentage points
+
+Best Macro-F1 improvement : Gaussian Noise
+Macro-F1 improvement      : 48.5246 percentage points
+
+======================================================================
+FULL RESULTS
+======================================================================
+
+          corruption  baseline_accuracy  robust_accuracy  accuracy_improvement_robust_minus_baseline  baseline_macro_f1  robust_macro_f1  macro_f1_improvement_robust_minus_baseline
+               Clean            99.8650          99.7300                                     -0.1350            99.7282          99.5572                                     -0.1710
+      Gaussian Noise            38.9837          87.9465                                     48.9628            37.4118          85.9364                                     48.5246
+       Gaussian Blur            91.1624          99.5827                                      8.4203            91.2601          99.3582                                      8.0981
+Brightness Reduction            99.7668          99.5213                                     -0.2455            99.5930          99.3309                                     -0.2621
+  Contrast Reduction            99.7545          99.7054                                     -0.0491            99.6032          99.5761                                     -0.0272
+    JPEG Compression            99.6072          99.6809                                      0.0736            99.4272          99.4981                                      0.0709
+            Rotation            99.5458          99.7422                                      0.1964            99.2376          99.5721                                      0.3344
+    Random Occlusion            99.7668          99.7177                                     -0.0491            99.6156          99.6045                                     -0.0111
+
+======================================================================
+INTERPRETATION
+======================================================================
+
+The robust model improved Macro-F1 under Gaussian Noise compared with the baseline.
+
+Mean Macro-F1 improvement across corruptions (excluding clean): 8.1040 percentage points.
+
+Clean-test performance should be interpreted separately from corruption robustness. The principal purpose of this comparison is to determine whether robust training reduces performance degradation under image corruptions.
+
+✓ Corrected robustness comparison completed.

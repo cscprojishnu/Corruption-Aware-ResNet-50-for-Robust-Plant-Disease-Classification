@@ -1,0 +1,8 @@
+true_class,predicted_class,count,true_class_total,error_rate_within_true_class
+Corn_(maize)___Northern_Leaf_Blight,Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot,4,147,0.027210884353741496
+Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot,Corn_(maize)___Northern_Leaf_Blight,2,77,0.025974025974025976
+Cherry_(including_sour)___healthy,Potato___healthy,1,128,0.0078125
+"Pepper,_bell___Bacterial_spot","Pepper,_bell___healthy",1,149,0.006711409395973154
+Tomato___Target_Spot,Tomato___Spider_mites Two-spotted_spider_mite,1,210,0.004761904761904762
+Tomato___Spider_mites Two-spotted_spider_mite,Tomato___Septoria_leaf_spot,1,252,0.003968253968253968
+Tomato___Septoria_leaf_spot,Tomato___Early_blight,1,265,0.0037735849056603774

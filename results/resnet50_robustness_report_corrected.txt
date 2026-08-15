@@ -1,0 +1,82 @@
+RESNET-50 CORRECTED ROBUSTNESS EVALUATION
+======================================================================
+
+Checkpoint: C:\Users\cscpr\Downloads\random 2\models\resnet50_baseline_best.pth
+Test images: 8147
+Number of classes: 38
+
+IMPORTANT PIPELINE:
+Original image -> corruption -> resize -> tensor -> normalize -> model
+
+
+clean
+  Loss: 0.006134
+  Accuracy: 99.8650%
+  Balanced Accuracy: 99.7889%
+  Macro-F1: 99.7282%
+  Weighted-F1: 99.8653%
+  Accuracy drop: 0.0000 percentage points
+  Macro-F1 drop: 0.0000 percentage points
+
+gaussian_noise
+  Loss: 1.216422
+  Accuracy: 74.8496%
+  Balanced Accuracy: 77.8280%
+  Macro-F1: 79.6816%
+  Weighted-F1: 77.0172%
+  Accuracy drop: 25.0153 percentage points
+  Macro-F1 drop: 20.0467 percentage points
+
+gaussian_blur
+  Loss: 0.643881
+  Accuracy: 85.8721%
+  Balanced Accuracy: 85.7281%
+  Macro-F1: 85.9558%
+  Weighted-F1: 85.4087%
+  Accuracy drop: 13.9929 percentage points
+  Macro-F1 drop: 13.7724 percentage points
+
+brightness
+  Loss: 0.013591
+  Accuracy: 99.5581%
+  Balanced Accuracy: 99.4214%
+  Macro-F1: 99.3526%
+  Weighted-F1: 99.5583%
+  Accuracy drop: 0.3069 percentage points
+  Macro-F1 drop: 0.3756 percentage points
+
+contrast
+  Loss: 0.012606
+  Accuracy: 99.6563%
+  Balanced Accuracy: 99.5361%
+  Macro-F1: 99.4653%
+  Weighted-F1: 99.6572%
+  Accuracy drop: 0.2087 percentage points
+  Macro-F1 drop: 0.2629 percentage points
+
+jpeg_compression
+  Loss: 0.053922
+  Accuracy: 98.2939%
+  Balanced Accuracy: 98.0067%
+  Macro-F1: 97.9747%
+  Weighted-F1: 98.2945%
+  Accuracy drop: 1.5711 percentage points
+  Macro-F1 drop: 1.7535 percentage points
+
+rotation
+  Loss: 0.016451
+  Accuracy: 99.5458%
+  Balanced Accuracy: 99.3502%
+  Macro-F1: 99.2376%
+  Weighted-F1: 99.5458%
+  Accuracy drop: 0.3191 percentage points
+  Macro-F1 drop: 0.4906 percentage points
+
+occlusion
+  Loss: 0.008622
+  Accuracy: 99.7300%
+  Balanced Accuracy: 99.6481%
+  Macro-F1: 99.6006%
+  Weighted-F1: 99.7303%
+  Accuracy drop: 0.1350 percentage points
+  Macro-F1 drop: 0.1276 percentage points
